@@ -1,0 +1,84 @@
+    
+<!DOCTYPE html>
+<head>   
+  <link rel="stylesheet" type="text/css" href="../../client/stylesheets/main.css">
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+</head>  
+ 
+<body>
+    <div id="mocha"></div>
+  <div class='container-vertical-1'>
+      <header class='header-babble'>
+        <img src='../../client/images/babble.PNG'> 
+      </header>
+	    <div class="modal-wrapper" id='modal'>
+      <div class="modal"> 
+          <h1 class='register'> register </h1>
+          <h2 class="modal-header">Who are you? </h2>
+          <div class='modal-main'>
+              <ul class="modal-titles">
+                <li class="user-name"> <h3> Full name: </h3>  <input class="input modal-name" id='modal-name' > </li>
+                <li class="email"> <h3> Email: </h3>  <input class="input modal-email" id='modal-email' >  </li>  
+              </ul>
+          </div>
+          <footer class="modal-footer">
+                  <button class='modal-btn modal-anonymous' id='modal-btn-annonym'>Stay Annonymous</button>    
+                  <button class='modal-btn modal-save' id='modal-btn-save'>Save </button>  
+          </footer>
+      </div>
+    </div> 
+      <div class='main'>
+        <nav class='nav-side'></nav>
+        <div class='container-vertical-2'> 
+            <article class='chat-topic'>
+              <header class='header-chat'> Vegans </header>
+              <dl class='stats'> 
+                <dt class='count-messages' id='count-messages'> 
+                  <img class='middle' src='../../client/images/messages-logo.png' >   
+                  0
+                </dt>
+                <dd hidden> The number of messages in chat </dd>
+                <dt class='count-users' id='count-users'> 
+                  <img class='middle' src='../../client/images/clients-logo.png'> 
+                  0
+                  </dt>
+                  <dd hidden> The number of clients avaliable in chat </dd>
+              </dl>
+            </article>      
+            <div class='chat' id='chati'>                         
+            </div>
+            <form class='send-message-form' onsubmit="return false">          
+              <div class='ta-message-container'>
+                <pre><span id='ta-span-message'></span></pre>
+                <textarea id='ta-message'></textarea>
+              </div>
+              <div class='btn-div-container'>
+                <button aria-label="Send message" class='btn' id='button-send'    >
+                  <img src="../../client/images/send-btn.PNG">
+                </button>
+              </div>
+              <div class='empty-div-btn'></div>  
+            </form>
+          </div> 
+      </div>     
+  </div>
+ 
+   <script src="../../node_modules/mocha/mocha.js"></script>
+   <script src="../../node_modules/sinon/pkg/sinon-4.0.1.js"></script>
+   <script src="../../node_modules/chai/chai.js"></script>
+  
+  <script>mocha.setup('bdd')</script>
+   <script src="test.js"></script> 
+  
+  
+  <script>
+    // mocha.checkLeaks();
+    // mocha.globals(['jQuery']);
+    mocha.run();
+</script>                                 
+<script src="../../client/scripts/main.js"></script> 
+</body>
+</html>    

@@ -1,0 +1,33 @@
+{
+  "name": "babble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "concurrently \"node server/main.js\" \"http-server -p 8081 -o test\\client\\index.html\" \"mocha test/server/test.js\"",
+	"start": "concurrently \"http-server -p 8080 -o client\\index.html\" \"node server/main.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizraz/babble.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mizraz/babble/issues"
+  },
+  "homepage": "https://github.com/mizraz/babble#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "concurrently": "^3.5.0",
+    "mocha": "^4.0.1",
+    "open": "0.0.5",
+    "open-browser": "^3.5.2",
+    "sinon": "^4.0.1"
+  }
+}
