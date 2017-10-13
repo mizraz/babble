@@ -1,0 +1,74 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">   
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <meta name="viewport" content="width=device-width" >
+    <title> Vegans - Babble</title>
+  </head>  
+
+  <body>
+  <div class="modal-wrapper" id='modal'>
+    <div class="modal"> 
+      <h1 class='register'> register </h1>
+      <h2 class="modal-header">Who are you? </h2>
+      <div class='modal-main'>
+          <ul class="modal-titles">
+            <li class="user-name"> <label for="modal-name">Full name:</label> <!-- <h3> Full name: </h3> --> <input type='text' name='modal-name' class="input modal-name" id='modal-name' > </li>
+            <li class="email"> <label for='modal-email'>Email: </label><!--<h3> Email: </h3>-->  <input type='text' name='modal-email' class="input modal-email" id='modal-email' >  </li>  
+          </ul>
+      </div>
+          <footer class="modal-footer">
+                  <button class='modal-btn modal-anonymous' id='modal-btn-annonym'>Stay Annonymous</button>    
+                  <button class='modal-btn modal-save' id='modal-btn-save'>Save </button>  
+          </footer>
+      </div>
+    </div> 
+    <div class='container-vertical-1'>
+        <header class='header-babble'>
+            <h1 class='header-babble-text'>Babble</h1>
+          <img src='images/babble.PNG' alt='babble'>
+        </header>
+        <!-- <a id="vegans/#"></a>         -->
+        <div class='main'>
+          <nav class='nav-side'></nav>
+          <div class='container-vertical-2'> 
+              <article class='chat-topic' >
+                <header class='header-chat'> <h2> Vegans </h2> </header>
+                <dl class='stats'> 
+                  <dt class='count-messages' id='count-messages'> 
+                    <img class='middle' src='images/messages-logo.png' alt='messages counter' >   
+                    0
+                  </dt>
+                  <dd hidden> The number of messages in chat </dd>
+                  <dt class='count-users' id='count-users'> 
+                    <img class='middle' src='images/clients-logo.png' alt='clients counter'> 
+                    0
+                    </dt>
+                    <dd hidden> The number of clients avaliable in chat </dd>
+                </dl>
+              </article>      
+              <ul class='chat style-2' id='chati'>   
+
+                        </ul>
+              <form class='send-message-form' onsubmit="return false">          
+                <div class='ta-message-container'>
+                  <pre><span id='ta-span-message'></span></pre>
+                  <label hidden for="ta-message"> enter message </label>                  
+                  <textarea id='ta-message'></textarea>
+                </div>
+                <div class='btn-div-container'>
+                  <button aria-label="Send message" class='btn-send' id='button-send'    >
+                    <img class='img-send-btn' src="images/send_button.jpg" alt='send message'>
+                  </button>
+                </div>
+                <div class='empty-div-btn'></div>  
+              </form>
+            </div> 
+        </div>     
+    </div>
+    <script src="scripts/main.js"></script>
+	
+  </body>
+</html>    
