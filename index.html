@@ -1,74 +1,99 @@
-    
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">   
-    <link rel="stylesheet" type="text/css" href="client/stylesheets/main.css">
-    <meta name="viewport" content="width=device-width" >
-    <title> Vegans - Babble</title>
-  </head>  
+<html lang="en"><head>
+  <meta charset="UTF-8">   
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <meta name="viewport" content="width=device-width">
+  <title> Vegans - Babble</title>
+</head>  
 
-  <body>
-  <div class="modal-wrapper" id='modal'>
-    <div class="modal"> 
-      <h1 class='register'> register </h1>
-      <h2 class="modal-header">Who are you? </h2>
-      <div class='modal-main'>
-          <ul class="modal-titles">
-            <li class="user-name"> <label for="modal-name">Full name:</label> <!-- <h3> Full name: </h3> --> <input type='text' name='modal-name' class="input modal-name" id='modal-name' > </li>
-            <li class="email"> <label for='modal-email'>Email: </label><!--<h3> Email: </h3>-->  <input type='text' name='modal-email' class="input modal-email" id='modal-email' >  </li>  
-          </ul>
-      </div>
-          <footer class="modal-footer">
-                  <button class='modal-btn modal-anonymous' id='modal-btn-annonym'>Stay Annonymous</button>    
-                  <button class='modal-btn modal-save' id='modal-btn-save'>Save </button>  
-          </footer>
-      </div>
-    </div> 
-    <div class='container-vertical-1'>
-        <header class='header-babble'>
-            <h1 class='header-babble-text'>Babble</h1>
-          <img src='client/images/babble.PNG' alt='babble'>
-        </header>
-        <!-- <a id="vegans/#"></a>         -->
-        <div class='main'>
-          <nav class='nav-side'></nav>
-          <div class='container-vertical-2'> 
-              <article class='chat-topic' >
-                <header class='header-chat'> <h2> Vegans </h2> </header>
-                <dl class='stats'> 
-                  <dt class='count-messages' id='count-messages'> 
-                    <img class='middle' src='client/images/messages-logo.png' alt='messages counter' >   
-                    0
-                  </dt>
-                  <dd hidden> The number of messages in chat </dd>
-                  <dt class='count-users' id='count-users'> 
-                    <img class='middle' src='client/images/clients-logo.png' alt='clients counter'> 
-                    0
-                    </dt>
-                    <dd hidden> The number of clients avaliable in chat </dd>
-                </dl>
-              </article>      
-              <ul class='chat style-2' id='chati'>   
-
-                        </ul>
-              <form class='send-message-form' onsubmit="return false">          
-                <div class='ta-message-container'>
-                  <pre><span id='ta-span-message'></span></pre>
-                  <label hidden for="ta-message"> enter message </label>                  
-                  <textarea id='ta-message'></textarea>
-                </div>
-                <div class='btn-div-container'>
-                  <button aria-label="Send message" class='btn-send' id='button-send'    >
-                    <img class='img-send-btn' src="client/images/send_button.jpg" alt='send message'>
-                  </button>
-                </div>
-                <div class='empty-div-btn'></div>  
-              </form>
-            </div> 
-        </div>     
+<body>
+<div class="modal-wrapper" id="modal" style="display: none;">
+  <div class="modal"> 
+    <h1 class="register"> register </h1>
+    <h2 class="modal-header">Who are you? </h2>
+    <div class="modal-main">
+        <ul class="modal-titles">
+          <li class="user-name"> <label for="modal-name">Full name:</label> <!-- <h3> Full name: </h3> --> <input type="text" name="modal-name" class="input modal-name" id="modal-name"> </li>
+          <li class="email"> <label for="modal-email">Email: </label><!--<h3> Email: </h3>-->  <input type="text" name="modal-email" class="input modal-email" id="modal-email">  </li>  
+        </ul>
     </div>
-    <script src="client/scripts/main.js"></script>
-	
-  </body>
-</html>    
+        <footer class="modal-footer">
+                <button class="modal-btn modal-anonymous" id="modal-btn-annonym">Stay Annonymous</button>    
+                <button class="modal-btn modal-save" id="modal-btn-save">Save </button>  
+        </footer>
+    </div>
+  </div> 
+  <div class="container-vertical-1">
+      <header class="header-babble">
+          <h1 class="header-babble-text">Babble</h1>
+        <img src="images/babble.PNG" alt="babble">
+      </header>
+      <!-- <a id="vegans/#"></a>         -->
+      <div class="main">
+        <nav class="nav-side"></nav>
+        <div class="container-vertical-2"> 
+            <article class="chat-topic">
+              <header class="header-chat"> <h2> Vegans </h2> </header>
+              <dl class="stats"> 
+                <dt class="count-messages" id="count-messages"> <img alt="messages counter" class="middle" src="images/messages-logo.png">22</dt>
+                <dd hidden=""> The number of messages in chat </dd>
+                <dt class="count-users" id="count-users"> <img alt="clients counter" class="middle" src="images/clients-logo.png">2</dt>
+                  <dd hidden=""> The number of clients avaliable in chat </dd>
+              </dl>
+            </article>      
+            <ul class="chat style-2" id="chati">   
+
+                      <li class="message" id="msg-id-0" tabindex="2">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:39.405Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="3" aria-label="Delete message id: msg-id-0" class="button-delete-message" id="del-msg-btn-msg-id-0">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       kjlj;lj
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-1" tabindex="4">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:40.949Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="5" aria-label="Delete message id: msg-id-1" class="button-delete-message" id="del-msg-btn-msg-id-1">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       kl';k;k
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-2" tabindex="6">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:41.933Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="7" aria-label="Delete message id: msg-id-2" class="button-delete-message" id="del-msg-btn-msg-id-2">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       jkl;jlk;
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-3" tabindex="8">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:42.845Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="9" aria-label="Delete message id: msg-id-3" class="button-delete-message" id="del-msg-btn-msg-id-3">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       klj;lk
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-4" tabindex="10">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:43.749Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="11" aria-label="Delete message id: msg-id-4" class="button-delete-message" id="del-msg-btn-msg-id-4">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-5" tabindex="12">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:43.910Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="13" aria-label="Delete message id: msg-id-5" class="button-delete-message" id="del-msg-btn-msg-id-5">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-6" tabindex="14">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:44.045Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="15" aria-label="Delete message id: msg-id-6" class="button-delete-message" id="del-msg-btn-msg-id-6">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-7" tabindex="16">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:44.189Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="17" aria-label="Delete message id: msg-id-7" class="button-delete-message" id="del-msg-btn-msg-id-7">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-8" tabindex="18">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:44.350Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="19" aria-label="Delete message id: msg-id-8" class="button-delete-message" id="del-msg-btn-msg-id-8">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-9" tabindex="20">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:44.493Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="21" aria-label="Delete message id: msg-id-9" class="button-delete-message" id="del-msg-btn-msg-id-9">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-10" tabindex="22">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:44.629Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="23" aria-label="Delete message id: msg-id-10" class="button-delete-message" id="del-msg-btn-msg-id-10">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-11" tabindex="24">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:44.781Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="25" aria-label="Delete message id: msg-id-11" class="button-delete-message" id="del-msg-btn-msg-id-11">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-12" tabindex="26">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:44.957Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="27" aria-label="Delete message id: msg-id-12" class="button-delete-message" id="del-msg-btn-msg-id-12">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-13" tabindex="28">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:45.125Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="29" aria-label="Delete message id: msg-id-13" class="button-delete-message" id="del-msg-btn-msg-id-13">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-14" tabindex="30">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:49:45.310Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="31" aria-label="Delete message id: msg-id-14" class="button-delete-message" id="del-msg-btn-msg-id-14">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">              </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-15" tabindex="32">      <div class="sidebar-message">      <img alt="" class="img-circle" src="images/annonymous.png">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Annonymous</cite>       <time datetime="2017-10-13T15:49:51.125Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">Annonymous</div>       <div class="container-button-delete-message">         <button tabindex="33" aria-label="Delete message id: msg-id-15" class="button-delete-message" id="del-msg-btn-msg-id-15">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       klj;jk
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-16" tabindex="34">      <div class="sidebar-message">      <img alt="" class="img-circle" src="images/annonymous.png">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Annonymous</cite>       <time datetime="2017-10-13T15:49:52.630Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">Annonymous</div>       <div class="container-button-delete-message">         <button tabindex="35" aria-label="Delete message id: msg-id-16" class="button-delete-message" id="del-msg-btn-msg-id-16">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       lk;jklj
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-17" tabindex="36">      <div class="sidebar-message">      <img alt="" class="img-circle" src="images/annonymous.png">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Annonymous</cite>       <time datetime="2017-10-13T15:49:53.694Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">Annonymous</div>       <div class="container-button-delete-message">         <button tabindex="37" aria-label="Delete message id: msg-id-17" class="button-delete-message" id="del-msg-btn-msg-id-17">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       jkljlkj
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-18" tabindex="38">      <div class="sidebar-message">      <img alt="" class="img-circle" src="images/annonymous.png">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Annonymous</cite>       <time datetime="2017-10-13T15:49:59.078Z" class="message-time-sent">18:49</time>       <div hidden="" class="email">Annonymous</div>       <div class="container-button-delete-message">         <button tabindex="39" aria-label="Delete message id: msg-id-18" class="button-delete-message" id="del-msg-btn-msg-id-18">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       klj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkk
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-19" tabindex="40">      <div class="sidebar-message">      <img alt="" class="img-circle" src="images/annonymous.png">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Annonymous</cite>       <time datetime="2017-10-13T15:50:11.038Z" class="message-time-sent">18:50</time>       <div hidden="" class="email">Annonymous</div>       <div class="container-button-delete-message">         <button tabindex="41" aria-label="Delete message id: msg-id-19" class="button-delete-message" id="del-msg-btn-msg-id-19">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       kjklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkk klj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkk klj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkkklj;lkjkkkkkkkkkkkkkkkkkkkkkkk
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-20" tabindex="42">      <div class="sidebar-message">      <img alt="" class="img-circle" src="images/annonymous.png">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Annonymous</cite>       <time datetime="2017-10-13T15:50:15.966Z" class="message-time-sent">18:50</time>       <div hidden="" class="email">Annonymous</div>       <div class="container-button-delete-message">         <button tabindex="43" aria-label="Delete message id: msg-id-20" class="button-delete-message" id="del-msg-btn-msg-id-20">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       klj;lkjkkkkkkkkkkkkkkkkkkkkkkk
+     </article>     </div>   <!-- end message -->  </li><li class="message" id="msg-id-21" tabindex="44">      <div class="sidebar-message">      <img alt="" class="img-circle" src="https://secure.gravatar.com/avatar/696967c52ecc7be8cd5bd16695f49abd">     </div> 
+<div class="message-body">     <header class="message-header">       <cite class="message-user-name">Raz Mizrahi</cite>       <time datetime="2017-10-13T15:50:20.309Z" class="message-time-sent">18:50</time>       <div hidden="" class="email">mizraz@gmail.com</div>       <div class="container-button-delete-message">         <button tabindex="45" aria-label="Delete message id: msg-id-21" class="button-delete-message" id="del-msg-btn-msg-id-21">           <img src="images/delete-btn.png" alt="delete message">         </button>         <div class="empty-div-del-btn"> </div>       </div>     </header>     <article class="message-content">       klk;lk;
+     </article>     </div>   <!-- end message -->  </li></ul>
+            <form class="send-message-form" onsubmit="return false">          
+              <div class="ta-message-container">
+                <pre><span id="ta-span-message"></span></pre>
+                <label hidden="" for="ta-message"> enter message </label>                  
+                <textarea id="ta-message"></textarea>
+              </div>
+              <div class="btn-div-container">
+                <button aria-label="Send message" class="btn-send" id="button-send">
+                  <img class="img-send-btn" src="images/send_button.jpg" alt="send message">
+                </button>
+              </div>
+              <div class="empty-div-btn"></div>  
+            </form>
+          </div> 
+      </div>     
+  </div>
+  <script src="scripts/main.js"></script>
+
+
+  </body></html>
